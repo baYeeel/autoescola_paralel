@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="ca"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#494900",
+                        "tertiary-fixed": "#eaea1b",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#c4c6d0",
+                        "background": "#f8f9fa",
+                        "on-primary-fixed": "#001a40",
+                        "surface-container": "#edeeef",
+                        "on-background": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b3a6b",
+                        "on-secondary-fixed-variant": "#723600",
+                        "primary-fixed-dim": "#acc7ff",
+                        "surface": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "primary": "#002452",
+                        "on-tertiary-container": "#424200",
+                        "secondary": "#964900",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "secondary-container": "#ff8927",
+                        "on-secondary-container": "#642f00",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#44474f",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#b1b100",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#acc7ff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#311400",
+                        "tertiary": "#626200",
+                        "outline": "#747780",
+                        "on-primary-fixed-variant": "#294678",
+                        "surface-tint": "#425e91",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-fixed-dim": "#ffb786",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-tertiary-fixed": "#1d1d00",
+                        "on-primary-container": "#89a5dd",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "tertiary-fixed-dim": "#cdcd00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"],
+                        "h1": ["Inter"],
+                        "button-text": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button-text": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-20 px-md max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed-dim">
+                Autoescola Paral·lel
+            </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-button-text text-button-text text-primary dark:text-primary-fixed-dim border-b-2 border-secondary px-sm py-xs" href="#">Permisos</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="#">Precios</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="#">Nosaltres</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="#">Contacte</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="hidden sm:block font-button-text text-button-text text-on-surface-variant px-md py-base hover:bg-surface-container-high transition-colors duration-200 rounded-lg">CA/ES</button>
+<button class="bg-primary text-on-primary font-button-text text-button-text px-md py-base rounded-lg active:scale-95 transition-transform">Demana informació</button>
+</div>
+</div>
+</nav>
+<main class="pt-xl pb-xl">
+<!-- Hero Section -->
+<section class="mt-lg px-md max-w-container-max mx-auto mb-xl">
+<div class="flex flex-col md:flex-row items-center gap-lg">
+<div class="w-full md:w-1/2">
+<h1 class="font-h1 text-h1 text-primary mb-base">Tria el teu camí cap a la llibertat</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">Explora la nostra àmplia gamma de permisos de conduir. Des de la teva primera moto fins al transport professional, t'acompanyem en cada quilòmetre.</p>
+</div>
+<div class="w-full md:w-1/2 relative rounded-xl overflow-hidden shadow-lg h-[300px]">
+<img class="w-full h-full object-cover" data-alt="A clean, professional training car with dual controls parked in a modern urban driving school setting. The lighting is bright and optimistic, reflecting a safe learning environment. The image uses deep navy blue accents and a corporate modern aesthetic with soft morning sunlight casting gentle shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCik7_xRFFFg8A7lH-j0X0rvEjhufTxUpG2iiwwpKgSl8NlZfnyZSVnPpO1aUyQiLUPDCMV4NfB1wevWBWoor1o7LvHcGrZyUtA5cxw4iEWUaXpfiTm_FiEIcczKKMUyWFWFVRBZgAvkBQoHsfvPcDAuR2Keh4aLrQ0acCT4GUewLxEy5iNPD-QCiIp2DMsQ1ahsPCvk_n988AimUErSH5KwuWvKhHEN02hvvSoMEYM9d_pzzajboQt4RgNYF68Nqob3kPNpjpQqjY"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid Permits -->
+<section class="px-md max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Permiso B - Car -->
+<div class="md:col-span-8 bg-white border border-outline-variant p-md rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-full md:w-1/3 h-48 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of a student driver's hands on a steering wheel, focusing on the precision and confidence taught at the academy. The interior is modern and clean, with soft natural light entering through the windshield, maintaining the brand's navy and expert atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7g7bCoLNLAvhfjkJZuMFTDuIU-6H0e40W_Jnghp9SI4WPBpf78ENBvIJnKbTA4eQlBFkQ3UuFB_eO2RelURi7h9wrVGFI3P9uBKeXnH9Ai0NtUnZPQSs6AQNIkgLjcTPxhFgFehsi6a9hcsR5mhEM5SvDYaNjAjMmbtjfVgcNiu8MFxvZy5cdMMH_ggsZHvx_CX2LmL0tdbfW2cWtePHnHZ0OL3_jxUkB4OPi6OHvtkvef0p6Sa1_Fk6t_GjYAjDQSccZpY2_iUg"/>
+</div>
+<div class="w-full md:w-2/3">
+<div class="flex justify-between items-start mb-base">
+<span class="bg-secondary text-on-secondary px-sm py-xs rounded font-bold text-h3">B</span>
+<span class="text-primary font-bold text-h3">Cotxe</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">El carnet més popular. Permet conduir automòbils fins a 3.500 kg.</p>
+<div class="space-y-xs mb-md">
+<div class="flex items-center gap-xs text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">person</span>
+                                    Edat mínima: 18 anys (Teòrica als 17 i 9 mesos)
+                                </div>
+<div class="flex items-center gap-xs text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">task</span>
+                                    Proves: Teòrica Comuna + Circulació
+                                </div>
+</div>
+<div class="flex gap-base">
+<a class="bg-primary text-on-primary font-button-text text-button-text px-md py-base rounded-lg flex items-center gap-xs" href="#">Veure Preus <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Permiso AM - Ciclomotor -->
+<div class="md:col-span-4 bg-white border border-outline-variant p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-md">
+<span class="bg-primary text-on-primary px-sm py-xs rounded font-bold text-h3">AM</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">moped</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-base">Ciclomotor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">La teva primera entrada a la mobilitat urbana fins a 50cc.</p>
+<ul class="space-y-xs text-on-surface-variant font-label-md mb-md">
+<li class="flex items-center gap-xs">Edat: 15 anys</li>
+<li class="flex items-center gap-xs">Teòrica Específica</li>
+<li class="flex items-center gap-xs">Pista tancada</li>
+</ul>
+</div>
+<a class="text-primary font-button-text text-button-text hover:underline flex items-center gap-xs" href="#">Detalls de preus <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<!-- Permiso A1/A2 - Moto -->
+<div class="md:col-span-6 bg-white border border-outline-variant p-md rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-base mb-md">
+<span class="bg-secondary text-on-secondary px-sm py-xs rounded font-bold text-h3">A1 / A2</span>
+<h3 class="font-h3 text-h3 text-primary">Motocicletes</h3>
+</div>
+<div class="grid grid-cols-2 gap-md mb-md">
+<div class="p-base bg-surface-container rounded-lg border border-outline-variant/30">
+<p class="font-bold text-primary mb-xs">Permís A1</p>
+<p class="font-label-md text-on-surface-variant">Fins a 125cc. Mínim 16 anys. Teòrica + Pista + Circulació.</p>
+</div>
+<div class="p-base bg-surface-container rounded-lg border border-outline-variant/30">
+<p class="font-bold text-primary mb-xs">Permís A2</p>
+<p class="font-label-md text-on-surface-variant">Fins a 35kW. Mínim 18 anys. El pas previ al carnet A.</p>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden h-40 mb-md">
+<img class="w-full h-full object-cover" data-alt="A row of modern training motorcycles parked in a precise line at the driving academy's private circuit. The vibrant orange safety cones contrast with the deep navy shadows of the pavement. The mood is focused and technical, with high-quality morning light showcasing the professional gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-x6qdcH99mx2RsZIWYTmOxs6ePufOFj3ZtvtoyBMsNToMZeJWlQftBhY62k1h_y3MbGWthv0AtqQ-nsHgpVzWfMzd6yAfUWNnFRA2wGCC7XoF9R1H7tK0OWmKmPa6Dro422bQlobasidc6Kx9FWYRTLoK_N3PUijggxqgHndBlgT7f-HdlCZ3CvZMAyOgwD0XBs8XvNFwq-2THvLopuBEUbLJHUui_HqVZAv_9VxiAkUp_KL-LbTsaZVb_upDBxQx_gIf-XpmOQ"/>
+</div>
+<button class="w-full border-2 border-primary text-primary font-button-text text-button-text px-md py-base rounded-lg hover:bg-surface-container-high transition-colors">Informació detalla A1/A2</button>
+</div>
+<!-- Permiso C - Truck -->
+<div class="md:col-span-6 bg-primary text-on-primary p-md rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-md">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded font-bold text-h3">C</span>
+<span class="material-symbols-outlined text-secondary-container text-[48px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<h3 class="font-h1 text-h1 mb-base">Camions</h3>
+<p class="font-body-lg text-body-lg opacity-90 mb-md">Professionalitza la teva conducció. Transport de mercaderies sense límit de pes.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm mb-md">
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md">Edat mínima 21 anys (18 amb CAP)</span>
+</div>
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md">Teòrica específica</span>
+</div>
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md">Maniobres en circuit</span>
+</div>
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md">Circulació vial real</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-button-text text-button-text px-md py-base rounded-lg shadow-sm active:scale-95 transition-transform">Inicia la teva carrera professional</button>
+</div>
+</div>
+</section>
+<!-- Requirements Accordion -->
+<section class="mt-xl px-md max-w-container-max mx-auto">
+<h2 class="font-h2 text-h2 text-primary mb-lg text-center">Fases de l'aprenentatge</h2>
+<div class="max-w-3xl mx-auto space-y-base">
+<!-- Step 1 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden">
+<div class="bg-surface-container p-md flex justify-between items-center cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h3 class="font-button-text text-button-text text-primary">Teòrica Comuna i Específica</h3>
+</div>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="p-md bg-white border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">Classes presencials i online amb professors titulats. Accés a la nostra plataforma de tests actualitzada cada setmana amb les darreres preguntes de la DGT.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden">
+<div class="bg-surface-container p-md flex justify-between items-center cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
+<h3 class="font-button-text text-button-text text-primary">Pràctiques en Circuit Tancat</h3>
+</div>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="p-md bg-white border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">Necessari per a permisos de moto (AM, A1, A2) i camió (C). Domina el vehicle en un entorn segur abans de sortir a la carretera.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden">
+<div class="bg-surface-container p-md flex justify-between items-center cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</span>
+<h3 class="font-button-text text-button-text text-primary">Prova de Circulació en Via Pública</h3>
+</div>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="p-md bg-white border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">L'últim pas. Conducció real per ciutat i autovia/autopista per demostrar les teves habilitats i coneixements de seguretat vial.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl bg-primary dark:bg-on-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg px-md max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-h3 text-h3 text-on-primary dark:text-on-primary-fixed font-bold mb-md">
+                    Autoescola Paral·lel
+                </div>
+<p class="text-surface-variant/80 font-body-md text-body-md mb-md">Formant conductors segurs i responsables a Barcelona des de fa més de 30 anys.</p>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-button-text text-button-text text-on-primary mb-md">Links ràpids</h4>
+<ul class="space-y-sm">
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="#">Permisos de conduir</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="#">Llistat de Preus</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="#">Reserva la teva plaça</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-button-text text-button-text text-on-primary mb-md">Contacte</h4>
+<div class="text-surface-variant/80 space-y-xs font-body-md text-body-md">
+<p class="flex items-center gap-xs"><span class="material-symbols-outlined">location_on</span> Av. Paral·lel 190, Barcelona</p>
+<p class="flex items-center gap-xs"><span class="material-symbols-outlined">call</span> +34 93X XX XX XX</p>
+<p class="flex items-center gap-xs"><span class="material-symbols-outlined">mail</span> info@autoescolaparallel.com</p>
+</div>
+</div>
+<div class="md:col-span-12 border-t border-surface-variant/20 pt-md flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-surface-variant/60 font-body-md text-body-md">© 2024 Autoescola Paral·lel. Tots els drets reservats.</p>
+<div class="flex gap-md text-surface-variant/60 font-label-md">
+<a class="hover:text-on-primary" href="#">Avis Legal</a>
+<a class="hover:text-on-primary" href="#">Privacitat</a>
+<a class="hover:text-on-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="ca"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Autoescola Paral·lel | La teva autoescola de confiança a Barcelona</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#acc7ff",
+                      "on-primary-fixed": "#001a40",
+                      "secondary-container": "#ff8927",
+                      "on-surface-variant": "#44474f",
+                      "on-secondary-fixed-variant": "#723600",
+                      "outline-variant": "#c4c6d0",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "outline": "#747780",
+                      "on-surface": "#191c1d",
+                      "primary": "#002452",
+                      "on-primary-fixed-variant": "#294678",
+                      "on-secondary-fixed": "#311400",
+                      "on-secondary": "#ffffff",
+                      "background": "#f8f9fa",
+                      "surface-container-low": "#f3f4f5",
+                      "on-background": "#191c1d",
+                      "surface-container-highest": "#e1e3e4",
+                      "inverse-primary": "#acc7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#89a5dd",
+                      "secondary-fixed": "#ffdcc6",
+                      "surface-variant": "#e1e3e4",
+                      "on-secondary-container": "#642f00",
+                      "surface-tint": "#425e91",
+                      "tertiary": "#626200",
+                      "surface-container-high": "#e7e8e9",
+                      "tertiary-container": "#b1b100",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#d7e2ff",
+                      "tertiary-fixed-dim": "#cdcd00",
+                      "on-tertiary-fixed-variant": "#494900",
+                      "tertiary-fixed": "#eaea1b",
+                      "surface-dim": "#d9dadb",
+                      "surface-container": "#edeeef",
+                      "secondary-fixed-dim": "#ffb786",
+                      "surface": "#f8f9fa",
+                      "on-tertiary-container": "#424200",
+                      "secondary": "#964900",
+                      "on-tertiary-fixed": "#1d1d00",
+                      "primary-container": "#1b3a6b",
+                      "surface-bright": "#f8f9fa",
+                      "inverse-surface": "#2e3132",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "lg": "48px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "h1": ["Inter"],
+                      "button-text": ["Inter"],
+                      "body-md": ["Inter"],
+                      "h2": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h3": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "button-text": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-fill {
+          font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#c4c6d0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-20 px-md max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed-dim" href="#">
+                Autoescola Paral·lel
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#permisos">Permisos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#preus">Precios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#nosaltres">Nosaltres</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contacte">Contacte</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-sm">
+<button class="hidden md:block font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors">
+                    CA/ES
+                </button>
+<a class="font-button-text text-button-text bg-primary text-on-primary px-md py-sm rounded-lg hover:bg-primary-container transition-colors duration-200 active:scale-95 transition-transform flex items-center gap-xs shadow-[0_4px_12px_rgba(27,58,107,0.05)] hover:shadow-[0_12px_24px_rgba(27,58,107,0.1)]" href="#contacte">
+                    Demana informació
+                </a>
+<button class="md:hidden text-on-surface p-xs">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- 2. Hero Section -->
+<section class="relative pt-[120px] pb-xl lg:pt-[160px] lg:pb-[120px] overflow-hidden flex items-center min-h-[921px]">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Driving on Avenida Paralelo in Barcelona" class="w-full h-full object-cover opacity-20 dark:opacity-10" data-alt="A cinematic, wide-angle shot of a modern car driving smoothly down the iconic Avenida Paralelo in Barcelona during golden hour. The sunlight reflects warmly off the car's surface and the surrounding modernist architecture. The scene is bright, clear, and professional, conveying a sense of safety, progress, and local community rootedness. The color palette leans towards deep navy shadows and vibrant orange highlights, matching the corporate modern aesthetic of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD59fWDuZbu0kCs8yABBRGPutY-szI-HEVaObjAg8enSX4KMjzSNNbOx9in0YwRJaMOSM66QQrYI9pr6XWm6-cEd-nZu5Drl7ewRgJpYy1Z4uXxhsTSntMqrZyASBct6JTvyB-pDS5T0DNnyoSN9vp8i7CdHJaXNcag4nKOnzbX11ScPcZ-37mR5zW_NNQCC7rew4JBy-9moVXHt2pWD58FsjEk0lWjJpWy9QuneaQlNCaoBsAWz9iO3eiSJXj3wjPqm0RO8Q61kao"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/80 to-background/95"></div>
+</div>
+<div class="relative z-10 px-md max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-lg">
+<div class="flex flex-col gap-sm">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-container/20 text-secondary w-fit font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                        Autoescola de confiança des de 1970
+                    </span>
+<h1 class="font-h1 text-h1 text-on-surface lg:text-[56px] lg:leading-[1.1] text-balance">
+                        Treu el carnet amb l'autoescola de confiança del <span class="text-primary">Paral·lel</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-sm text-balance">
+                        Aprèn a conduir amb seguretat, sense estrès i al teu ritme. Som la tercera generació formant conductors a Barcelona amb un enfocament proper i professional.
+                    </p>
+</div>
+<div class="flex flex-wrap items-center gap-md">
+<a class="font-button-text text-button-text bg-secondary-container text-on-secondary-container px-lg py-md rounded-lg hover:brightness-110 transition-all duration-200 active:scale-95 flex items-center gap-xs shadow-[0_4px_12px_rgba(27,58,107,0.05)] hover:shadow-[0_12px_24px_rgba(27,58,107,0.1)]" href="#contacte">
+                        Comença ara
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="font-button-text text-button-text bg-surface text-primary border-2 border-primary px-lg py-md rounded-lg hover:bg-surface-container-low transition-colors duration-200 active:scale-95 shadow-[0_4px_12px_rgba(27,58,107,0.05)]" href="#preus">
+                        Veure preus
+                    </a>
+</div>
+<!-- Trust Indicators -->
+<div class="flex flex-wrap items-center gap-lg mt-md pt-md border-t border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<p class="font-button-text text-button-text text-on-surface">+40 anys</p>
+<p class="font-label-md text-label-md text-on-surface-variant">D'experiència</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<p class="font-button-text text-button-text text-on-surface">Escola familiar</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Tracte proper</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="font-button-text text-button-text text-on-surface">Alt índex</p>
+<p class="font-label-md text-label-md text-on-surface-variant">D'aprovats</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-4 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-2xl transform rotate-3 scale-105"></div>
+<img alt="Student driving" class="relative z-10 w-full aspect-[4/5] object-cover rounded-2xl shadow-[0_12px_24px_rgba(27,58,107,0.1)] border border-outline-variant/30" data-alt="A focused young student driver's hands gripping a steering wheel inside a modern car. The dashboard is visible in the foreground. The lighting is bright and natural, coming from the windshield, highlighting the student's confident posture. The background outside the window shows a softly blurred, sunny urban street in Barcelona. The aesthetic is clean, modern, and reassuring, using a palette of deep navy dashboard tones and bright white daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZEHiwwyDYdmq_OE8vDw3LdGQxLcx8cfXRAcPWc1JReWVGW0W3oEqtn4Vj1SvcTPJVQsydlWaD24-cTosd_ebv78_wTtzcDdmgNxPrvO0Jkesi90XRSnlSO9TIuOZWwSFLbcbcynKOTHCtCVz7bziJ7uSaSd01MiYT56epXqhSJfefpBA7bzVzTWmZTWGytCrMQHim8vRMQJgfpkXXfojZE5cMUShfsUXtP8Js8W7iQK2P4FTxx69w9HsrDjk6H1I7ac6ibdpOfnU"/>
+</div>
+</div>
+</section>
+<!-- 10. Footer -->
+<footer class="bg-primary dark:bg-on-surface text-on-primary dark:text-on-primary-fixed w-full py-xl mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg px-md max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="md:col-span-4 flex flex-col gap-md">
+<h3 class="font-h3 text-h3 text-on-primary dark:text-on-primary-fixed font-bold">
+                    Autoescola Paral·lel
+                </h3>
+<p class="font-body-md text-body-md text-surface-variant/80">
+                    Formem conductors segurs i responsables des de 1970. La teva autoescola de barri amb estàndards professionals.
+                </p>
+<div class="mt-auto pt-md">
+<p class="font-label-md text-label-md text-surface-variant/60">
+                        © 2024 Autoescola Paral·lel. Tots els drets reservats.
+                    </p>
+</div>
+</div>
+<!-- Links -->
+<div class="md:col-span-4 flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-secondary-fixed mb-sm">Informació Legal</h4>
+<a class="font-body-md text-body-md text-surface-variant/80 hover:text-on-primary transition-all duration-300 hover:underline decoration-secondary decoration-2 underline-offset-4" href="#">Avis Legal</a>
+<a class="font-body-md text-body-md text-surface-variant/80 hover:text-on-primary transition-all duration-300 hover:underline decoration-secondary decoration-2 underline-offset-4" href="#">Privacitat</a>
+<a class="font-body-md text-body-md text-surface-variant/80 hover:text-on-primary transition-all duration-300 hover:underline decoration-secondary decoration-2 underline-offset-4" href="#">Cookies</a>
+</div>
+<!-- Contact -->
+<div class="md:col-span-4 flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-secondary-fixed mb-sm">Contacte &amp; Ubicació</h4>
+<div class="flex items-start gap-sm text-surface-variant/80">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<a class="font-body-md text-body-md hover:text-on-primary transition-all duration-300 hover:underline decoration-secondary decoration-2 underline-offset-4" href="#">
+                        Av. Paral·lel 190, Barcelona
+                    </a>
+</div>
+<div class="flex items-center gap-sm text-surface-variant/80 mt-sm">
+<span class="material-symbols-outlined">call</span>
+<span class="font-body-md text-body-md">93 123 45 67</span>
+</div>
+<div class="flex items-center gap-sm text-surface-variant/80 mt-sm">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-md text-body-md">info@autoescolaparallel.cat</span>
+</div>
+<!-- Social -->
+<div class="flex gap-md mt-md pt-md border-t border-surface-variant/20">
+<a class="text-surface-variant/80 hover:text-secondary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
