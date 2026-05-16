@@ -314,10 +314,13 @@ function applyLang(lang) {
     }
   });
 
-  // Sync dropdown label
-  document.querySelectorAll(".lang-btn-label").forEach(el => {
-    el.textContent = lang.toUpperCase();
-  });
+  // Sync dropdown label + flag
+  const FLAGS = {
+    ca: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="20" height="13" style="border-radius:2px"><rect width="9" height="6" fill="#FCDD09"/><rect y="1" width="9" height="1" fill="#DA121A"/><rect y="3" width="9" height="1" fill="#DA121A"/><rect y="5" width="9" height="1" fill="#DA121A"/></svg>`,
+    es: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="13" style="border-radius:2px"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>`
+  };
+  document.querySelectorAll(".lang-btn-label").forEach(el => { el.textContent = lang.toUpperCase(); });
+  document.querySelectorAll(".lang-btn-flag").forEach(el => { el.innerHTML = FLAGS[lang] || ""; });
 
   // Update <html lang>
   document.documentElement.lang = lang;
@@ -346,7 +349,8 @@ document.addEventListener("DOMContentLoaded", () => {
         class="flex items-center gap-1 font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-surface-container-high"
         aria-haspopup="true" aria-expanded="false" id="lang-dropdown-btn"
       >
-        <span class="lang-btn-label">${current.toUpperCase()}</span>
+        <span class="lang-btn-flag" style="line-height:0;display:inline-flex"></span>
+        <span class="lang-btn-label" style="font-size:13px">${current.toUpperCase()}</span>
         <span class="material-symbols-outlined text-[18px] transition-transform duration-200" id="lang-chevron">expand_more</span>
       </button>
       <div
@@ -354,10 +358,20 @@ document.addEventListener("DOMContentLoaded", () => {
         class="absolute right-0 mt-1 w-28 bg-surface border border-outline-variant rounded-xl shadow-lg overflow-hidden hidden z-50"
       >
         <button data-lang="ca" class="lang-option w-full text-left px-4 py-2 font-button-text text-button-text hover:bg-surface-container-high transition-colors flex items-center gap-2">
-          <span class="text-lg">🏴</span> Català
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="22" height="15" style="border-radius:2px;flex-shrink:0">
+            <rect width="9" height="6" fill="#FCDD09"/>
+            <rect y="1" width="9" height="1" fill="#DA121A"/>
+            <rect y="3" width="9" height="1" fill="#DA121A"/>
+            <rect y="5" width="9" height="1" fill="#DA121A"/>
+          </svg>
+          Català
         </button>
         <button data-lang="es" class="lang-option w-full text-left px-4 py-2 font-button-text text-button-text hover:bg-surface-container-high transition-colors flex items-center gap-2">
-          <span class="text-lg">🇪🇸</span> Español
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="22" height="15" style="border-radius:2px;flex-shrink:0">
+            <rect width="3" height="2" fill="#c60b1e"/>
+            <rect y="0.5" width="3" height="1" fill="#ffc400"/>
+          </svg>
+          Español
         </button>
       </div>
     `;
