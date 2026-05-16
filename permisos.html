@@ -125,13 +125,13 @@
             </div>
 <div class="hidden md:flex items-center gap-md">
 <a class="font-button-text text-button-text text-primary dark:text-primary-fixed-dim border-b-2 border-secondary px-sm py-xs" href="permisos.html">Permisos</a>
-<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="precios.html">Precios</a>
-<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="nosaltres.html">Nosaltres</a>
-<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="contacte.html">Contacte</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="precios.html" data-i18n="nav.preus">Precios</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="nosaltres.html" data-i18n="nav.nosaltres">Nosaltres</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 px-sm py-xs" href="contacte.html" data-i18n="nav.contacte">Contacte</a>
 </div>
 <div class="flex items-center gap-base">
-<button class="hidden sm:block font-button-text text-button-text text-on-surface-variant px-md py-base hover:bg-surface-container-high transition-colors duration-200 rounded-lg">CA/ES</button>
-<a class="bg-primary text-on-primary font-button-text text-button-text px-md py-base rounded-lg active:scale-95 transition-transform" href="contacte.html">Demana informació</a>
+<button class="lang-toggle hidden md:block"></button>
+<a class="bg-primary text-on-primary font-button-text text-button-text px-md py-base rounded-lg active:scale-95 transition-transform" href="contacte.html" data-i18n="nav.cta">Demana informació</a>
 </div>
 </div>
 </nav>
@@ -140,7 +140,7 @@
 <section class="mt-lg px-md max-w-container-max mx-auto mb-xl">
 <div class="flex flex-col md:flex-row items-center gap-lg">
 <div class="w-full md:w-1/2">
-<h1 class="font-h1 text-h1 text-primary mb-base">Tria el teu camí cap a la llibertat</h1>
+<h1 class="font-h1 text-h1 text-primary mb-base" data-i18n="perm.h1">Tria el teu camí cap a la llibertat</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">Explora la nostra àmplia gamma de permisos de conduir. Des de la teva primera moto fins al transport professional, t'acompanyem en cada quilòmetre.</p>
 </div>
 <div class="w-full md:w-1/2 relative rounded-xl overflow-hidden shadow-lg h-[300px]">
@@ -160,7 +160,7 @@
 <div class="w-full md:w-2/3">
 <div class="flex justify-between items-start mb-base">
 <span class="bg-secondary text-on-secondary px-sm py-xs rounded font-bold text-h3">B</span>
-<span class="text-primary font-bold text-h3">Cotxe</span>
+<span class="text-primary font-bold text-h3" data-i18n="perm.b_title">Cotxe</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-md">El carnet més popular. Permet conduir automòbils fins a 3.500 kg.</p>
 <div class="space-y-xs mb-md">
@@ -186,12 +186,12 @@
 <span class="bg-primary text-on-primary px-sm py-xs rounded font-bold text-h3">AM</span>
 <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">moped</span>
 </div>
-<h3 class="font-h3 text-h3 text-primary mb-base">Ciclomotor</h3>
+<h3 class="font-h3 text-h3 text-primary mb-base" data-i18n="perm.am_title">Ciclomotor</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-md">La teva primera entrada a la mobilitat urbana fins a 50cc.</p>
 <ul class="space-y-xs text-on-surface-variant font-label-md mb-md">
-<li class="flex items-center gap-xs">Edat: 15 anys</li>
-<li class="flex items-center gap-xs">Teòrica Específica</li>
-<li class="flex items-center gap-xs">Pista tancada</li>
+<li class="flex items-center gap-xs" data-i18n="perm.am_age">Edat: 15 anys</li>
+<li class="flex items-center gap-xs" data-i18n="perm.am_t1">Teòrica Específica</li>
+<li class="flex items-center gap-xs" data-i18n="perm.am_t2">Pista tancada</li>
 </ul>
 </div>
 <a class="text-primary font-button-text text-button-text hover:underline flex items-center gap-xs" href="precios.html">Detalls de preus <span class="material-symbols-outlined">chevron_right</span></a>
@@ -200,22 +200,22 @@
 <div class="md:col-span-6 bg-white border border-outline-variant p-md rounded-xl shadow-sm hover:shadow-md transition-shadow">
 <div class="flex items-center gap-base mb-md">
 <span class="bg-secondary text-on-secondary px-sm py-xs rounded font-bold text-h3">A1 / A2</span>
-<h3 class="font-h3 text-h3 text-primary">Motocicletes</h3>
+<h3 class="font-h3 text-h3 text-primary" data-i18n="perm.a_title">Motocicletes</h3>
 </div>
 <div class="grid grid-cols-2 gap-md mb-md">
 <div class="p-base bg-surface-container rounded-lg border border-outline-variant/30">
-<p class="font-bold text-primary mb-xs">Permís A1</p>
+<p class="font-bold text-primary mb-xs" data-i18n="perm.a1_label">Permís A1</p>
 <p class="font-label-md text-on-surface-variant">Fins a 125cc. Mínim 16 anys. Teòrica + Pista + Circulació.</p>
 </div>
 <div class="p-base bg-surface-container rounded-lg border border-outline-variant/30">
-<p class="font-bold text-primary mb-xs">Permís A2</p>
+<p class="font-bold text-primary mb-xs" data-i18n="perm.a2_label">Permís A2</p>
 <p class="font-label-md text-on-surface-variant">Fins a 35kW. Mínim 18 anys. El pas previ al carnet A.</p>
 </div>
 </div>
 <div class="rounded-lg overflow-hidden h-40 mb-md">
 <img class="w-full h-full object-cover" data-alt="A row of modern training motorcycles parked in a precise line at the driving academy's private circuit. The vibrant orange safety cones contrast with the deep navy shadows of the pavement. The mood is focused and technical, with high-quality morning light showcasing the professional gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-x6qdcH99mx2RsZIWYTmOxs6ePufOFj3ZtvtoyBMsNToMZeJWlQftBhY62k1h_y3MbGWthv0AtqQ-nsHgpVzWfMzd6yAfUWNnFRA2wGCC7XoF9R1H7tK0OWmKmPa6Dro422bQlobasidc6Kx9FWYRTLoK_N3PUijggxqgHndBlgT7f-HdlCZ3CvZMAyOgwD0XBs8XvNFwq-2THvLopuBEUbLJHUui_HqVZAv_9VxiAkUp_KL-LbTsaZVb_upDBxQx_gIf-XpmOQ"/>
 </div>
-<a class="w-full border-2 border-primary text-primary font-button-text text-button-text px-md py-base rounded-lg hover:bg-surface-container-high transition-colors" href="contacte.html">Informació detalla A1/A2</a>
+<a class="w-full border-2 border-primary text-primary font-button-text text-button-text px-md py-base rounded-lg hover:bg-surface-container-high transition-colors" href="contacte.html" data-i18n="perm.a_cta">Informació detalla A1/A2</a>
 </div>
 <!-- Permiso C - Truck -->
 <div class="md:col-span-6 bg-primary text-on-primary p-md rounded-xl shadow-lg flex flex-col justify-between">
@@ -224,7 +224,7 @@
 <span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded font-bold text-h3">C</span>
 <span class="material-symbols-outlined text-secondary-container text-[48px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
 </div>
-<h3 class="font-h1 text-h1 mb-base">Camions</h3>
+<h3 class="font-h1 text-h1 mb-base" data-i18n="perm.c_title">Camions</h3>
 <p class="font-body-lg text-body-lg opacity-90 mb-md">Professionalitza la teva conducció. Transport de mercaderies sense límit de pes.</p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm mb-md">
 <div class="flex items-start gap-xs">
@@ -233,7 +233,7 @@
 </div>
 <div class="flex items-start gap-xs">
 <span class="material-symbols-outlined text-secondary-container">check_circle</span>
-<span class="font-label-md">Teòrica específica</span>
+<span class="font-label-md" data-i18n="perm.c_r2">Teòrica específica</span>
 </div>
 <div class="flex items-start gap-xs">
 <span class="material-symbols-outlined text-secondary-container">check_circle</span>
@@ -245,7 +245,7 @@
 </div>
 </div>
 </div>
-<a class="w-full bg-secondary text-on-secondary font-button-text text-button-text px-md py-base rounded-lg shadow-sm active:scale-95 transition-transform" href="contacte.html">Inicia la teva carrera professional</a>
+<a class="w-full bg-secondary text-on-secondary font-button-text text-button-text px-md py-base rounded-lg shadow-sm active:scale-95 transition-transform" href="contacte.html" data-i18n="perm.c_cta">Inicia la teva carrera professional</a>
 </div>
 </div>
 </section>
@@ -307,9 +307,9 @@
 <div class="md:col-span-4">
 <h4 class="font-button-text text-button-text text-on-primary mb-md">Links ràpids</h4>
 <ul class="space-y-sm">
-<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="permisos.html">Permisos de conduir</a></li>
-<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="precios.html">Llistat de Preus</a></li>
-<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="contacte.html">Reserva la teva plaça</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="permisos.html" data-i18n="perm.footer_l1">Permisos de conduir</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="precios.html" data-i18n="perm.footer_l2">Llistat de Preus</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-300" href="contacte.html" data-i18n="perm.footer_l3">Reserva la teva plaça</a></li>
 </ul>
 </div>
 <div class="md:col-span-4">
@@ -323,11 +323,12 @@
 <div class="md:col-span-12 border-t border-surface-variant/20 pt-md flex flex-col md:flex-row justify-between items-center gap-md">
 <p class="text-surface-variant/60 font-body-md text-body-md">© 2024 Autoescola Paral·lel. Tots els drets reservats.</p>
 <div class="flex gap-md text-surface-variant/60 font-label-md">
-<a class="hover:text-on-primary" href="#">Avis Legal</a>
-<a class="hover:text-on-primary" href="#">Privacitat</a>
+<a class="hover:text-on-primary" href="#" data-i18n="footer.avis">Avis Legal</a>
+<a class="hover:text-on-primary" href="#" data-i18n="footer.privacitat">Privacitat</a>
 <a class="hover:text-on-primary" href="#">Cookies</a>
 </div>
 </div>
 </div>
 </footer>
+<script src="lang.js"></script>
 </body></html>
